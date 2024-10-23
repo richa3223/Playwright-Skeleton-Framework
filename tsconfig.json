@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@builders/*": ["src/data/builders/*"],
+      "@data/*": ["./src/data/*"],
+      "@models/*": ["src/data/models/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["config/*"],
+      "@pageObjects/*": ["src/page-objects/*"],
+      "@wiremock/*": ["src/wiremock/*"]
+    },
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "CommonJS",
+    "strict": true,
+    "noEmit": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true, //When enabled, null and undefined will not be acceptable values for variables unless you explicitly declare them as nullable.
+    "allowUnreachableCode": false, //When set the false, reports error about unreachable code
+    "noImplicitReturns": true, //When enabled, the compiler will check all code paths in a function to ensure they return a value
+    "noUnusedLocals": true, //When enabled, the compiler will report unused local variables
+    "noUnusedParameters": true, //When enabled, the compiler will report unused parameters
+    "noImplicitOverride": true, //When enabled, then compiler will warn us if we try to override a method without using the override keyword
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "allowJs": false
+  },
+  "include": ["src", "playwright.config.ts", "config/configManager.ts"],
+  "exclude": [
+    "node_modules",
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./built/**/*",
+    "index.ts",
+    "*.js"
+  ]
+}

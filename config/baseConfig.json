@@ -1,0 +1,47 @@
+{
+  "test": {
+    "TRI": "unset",
+    "projectName": "playwright-skeleton-framework",
+    "maxWaitForHealthy": 60,
+    "navigationRetries": 3,
+    "accessibility": {
+      "autoscanEnabled": true,
+      "axeTags": "wcag21a,best-practice"
+    },
+    "wiremock": {
+      "enabled": false,
+      "autoTearDownMappings": true,
+      "endpoints": {
+        "health": "/__admin/health"
+      }
+    }
+  },
+  "ui": {
+    "swagLabs": {
+      "testUsers": {
+        "standardUser": {
+          "username": "standard_user",
+          "password": "secret_sauce"
+        },
+        "lockedOutUser": {
+          "username": "locked_out_user",
+          "password": "secret_sauce"
+        }
+      }
+    }
+  },
+  "api": {
+    "restfulBooker": {
+      "endpoints": {
+        "auth": "/auth",
+        "booking": "/booking"
+      },
+      "testUsers": {
+        "admin": {
+          "username": "admin",
+          "password": "password123"
+        }
+      }
+    }
+  }
+}

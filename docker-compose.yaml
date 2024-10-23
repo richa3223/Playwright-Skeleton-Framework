@@ -1,0 +1,7 @@
+services:
+  wiremock:
+    container_name: wiremock
+    image: wiremock/wiremock:3.5.4
+    ports:
+      - "8888:8080"
+    command: ["--verbose"]
